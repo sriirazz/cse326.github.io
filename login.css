@@ -1,0 +1,115 @@
+    body {
+        background-image: url('assets/login.jpg');
+    }
+    
+    .container {
+        font-family: 'Muli', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        justify-content: center;
+        padding-top: 2.25cm;
+    }
+    
+    .container a {
+        text-decoration: none;
+        color: white;
+        margin-top: 50%;
+    }
+    
+    .login {
+        float: right;
+    }
+    
+    .btn {
+        display: inline-block;
+        width: 150px;
+        cursor: pointer;
+        background-color: rgb(12, 5, 8);
+        padding: 15px;
+        font-family: inherit;
+        font-size: 16px;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        margin-left: 80px;
+    }
+    
+    .btn:focus {
+        outline: 0;
+    }
+    
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .text {
+        margin-top: 30px;
+    }
+    
+    .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 300px;
+    }
+    
+    .form-control input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid #fff;
+        display: block;
+        width: 100%;
+        padding: 15px 0 10px 0;
+        font-size: 18px;
+        color: #fff;
+    }
+    
+    .form-control input:focus,
+    .form-control input:valid {
+        outline: 0;
+        border-bottom-color: rgb(241, 97, 157);
+    }
+    
+    .form-control label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+    
+    .form-control label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        color: rgb(241, 97, 157);
+        transform: translateY(-30px);
+    }
+    
+    .container h1 {
+        color: darkorange
+    }
+    
+    a {
+        text-align: none;
+    }
+    
+    a:hover {
+        color: aqua;
+    }
+    
+    .heading {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: left;
+        padding: 0px;
+        color: #ededed;
+        color: #D0F8FF;
+        text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF, 0 0 20px #A5F1FF, 0 0 30px #A5F1FF, 0 0 40px #A5F1FF;
+        ;
+        font-weight: bold;
+        margin-left: 40px;
+    }

@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.container h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+select {
+    text-align: center;
+}
+
+#year {
+    margin-left: 16.5px;
+}
+
+#month {
+    margin-left: 16.5px;
+}
+
+table input {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;
+}
+
+button {
+    font: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}

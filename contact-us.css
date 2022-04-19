@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#heading {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    padding: 0px;
+    color: #D0F8FF;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF, 0 0 20px #A5F1FF, 0 0 30px #A5F1FF, 0 0 40px #A5F1FF;
+    ;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+select {
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 var(--white);
+}
+
+textarea {
+    resize: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font: 18px/1.5 "Open Sans", sans-serif;
+    background-color: black;
+    color: white;
+    margin: 1.5rem 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.7rem;
+    padding-top: 20px;
+    box-sizing: border-box;
+    box-shadow: rgba(233, 223, 223, 0.07) 0px 1px 2px, rgba(214, 202, 202, 0.07) 0px 2px 4px, rgba(122, 112, 112, 0.07) 0px 4px 8px, rgba(148, 124, 124, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.my-form h1 {
+    margin-bottom: 1.5rem;
+}
+
+.my-form li,
+.my-form .grid>*:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: var(--white);
+    background: var(--bgFormEls);
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+    height: 170px;
+}
+
+.my-form ::placeholder {
+    color: inherit;
+    opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus+label {
+    background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+    transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+    background-size: 15px 15px;
+}
+
+.my-form *:disabled {
+    cursor: default;
+    filter: blur(2px);
+}
+
+.my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+}
+
+.my-form button {
+    font-weight: bold;
+}
+
+.my-form button>* {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+    transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+    transform: translateX(110%);
+}
+
+.my-form input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.my-form input[type="checkbox"]+label {
+    position: relative;
+    display: inline-block;
+    padding-left: 2rem;
+    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form input[type="checkbox"]+label::before,
+.my-form input[type="checkbox"]+label::after {
+    content: '';
+    position: absolute;
+}
+
+.my-form input[type="checkbox"]+label::before {
+    left: 0;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--white);
+}
+
+.my-form input[type="checkbox"]:checked+label::before {
+    background: #007bb6;
+}
+
+.my-form input[type="checkbox"]:checked+label::after {
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 14px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 600px) {
+    .my-form .grid {
+        display: grid;
+        grid-gap: 1.5rem;
+    }
+    .my-form .grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .my-form .grid-3 {
+        grid-template-columns: auto auto auto;
+        align-items: center;
+    }
+    .my-form .grid>*:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .my-form .required-msg {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 541px) {
+    .my-form input[type="checkbox"]+label::before {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .my-form input[type="checkbox"]:checked+label::after {
+        top: 3px;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 1px
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+}
+
+.social-icons.size-sm a {
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    font-size: 24px
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6
+}
+
+.social-icons a.instagram:hover {
+    background-color: #8a3ab9
+}
+
+footer {
+    text-transform: uppercase;
+    text-shadow: -9px 3px 12px #ced0d3;
+    color: white;
+    letter-spacing: -0.045em;
+    font-family: 'Anton', Arial, sans-serif;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: all 0.25s ease-out;
+}
+
+a:hover {
+    color: #c0eb5d;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+}
+
+a {
+    text-decoration: none;
+}
